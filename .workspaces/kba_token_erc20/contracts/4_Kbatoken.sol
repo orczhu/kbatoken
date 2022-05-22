@@ -4,8 +4,8 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract ERC20Basic {
 
-    string public constant name = "ERC20Basic";
-    string public constant symbol = "BSC";
+    string public constant name = "KBAToken";
+    string public constant symbol = "KBAERC20";
     uint8 public constant decimals = 18;  
 
 
@@ -22,13 +22,13 @@ contract ERC20Basic {
     using SafeMath for uint256;
 
 
-   constructor(uint256 total) public {  
-	totalSupply_ = total;
-	balances[msg.sender] = totalSupply_;
+   constructor(uint256 total) {  
+	    totalSupply_ = total;
+	    balances[msg.sender] = totalSupply_;
     }  
 
     function totalSupply() public view returns (uint256) {
-	return totalSupply_;
+	    return totalSupply_;
     }
     
     function balanceOf(address tokenOwner) public view returns (uint) {
